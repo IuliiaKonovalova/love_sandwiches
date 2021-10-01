@@ -71,4 +71,5 @@ def main():
   sales_data = [int(num) for num in data]
   update_sales_worksheet(sales_data)
 
+print("Welcome to Love Sandwiches Data Automation")
 main()
