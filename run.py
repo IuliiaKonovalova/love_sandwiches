@@ -116,6 +116,13 @@ def calculate_stock_data(data):
 
     return new_stock_data
 
+def get_stock_values(data):
+    '''
+    Shows the user number of sandwiches to make for the next market
+    '''
+    headings = SHEET.worksheet("stock").row_values(1)
+    return {heading:value for heading, value in zip(headings, data)}
+    
 
 def main():
     """
@@ -136,10 +143,4 @@ def main():
 print("Welcome to Love Sandwiches Data Automation")
 main()
 
-def get_stock_values(data):
-    '''
-    Shows the user number of sandwiches to make for the next market
-    '''
-    headings = SHEET.worksheet("stock").row_values(1)
-    return {heading:value for heading, value in zip(headings, data)}
-    
+
