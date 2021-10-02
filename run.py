@@ -110,7 +110,7 @@ def calculate_stock_data(data):
     int_column = [int(num) for num in column]
     average = sum(int_column) / len(int/column)
     stock_num = average * 1.1
-    new_stock_data.append(stock_num)
+    new_stock_data.append(round(stock_num))
 
 
 
